@@ -3,6 +3,7 @@ package com.rahul.latticeinfotech
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rahul.latticeinfotech.adapter.NewsAdapter
 import com.rahul.latticeinfotech.api.RetrofitNews
@@ -29,12 +30,11 @@ class MainActivity : AppCompatActivity() {
         //layout manager
         val layoutManager = LinearLayoutManager(this)
 
-
+        //paging
         if (totalArticles>layoutManager.itemCount){
             pageNum++
             getNews()
         }
-
         rvNews.layoutManager = layoutManager
          getNews()
     }
@@ -53,9 +53,6 @@ class MainActivity : AppCompatActivity() {
                     articles.addAll(news.articles)
                     adapter.notifyDataSetChanged()
 
-                   /* adapter = NewsAdapter(this@MainActivity, news.articles)
-                    rvNews.adapter = adapter
-                    rvNews.layoutManager = LinearLayoutManager(this@MainActivity)*/
                 }
             }
             override fun onFailure(call: Call<ArticleResponse>, t: Throwable) {

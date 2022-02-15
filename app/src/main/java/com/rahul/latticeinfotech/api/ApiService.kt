@@ -23,6 +23,15 @@ interface ApiService {
         page:Int
     ):Call<ArticleResponse>
 
+    @GET("v2/everything?apiKey=$API_KEY")
+    fun getSearchedNews(
+        @Query("query")
+        query:String,
+
+        @Query("page")
+        page:Int=1
+    ):Call<ArticleResponse>
+
 }
 object RetrofitNews{
     val apiService:ApiService
