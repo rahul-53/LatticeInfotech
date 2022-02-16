@@ -78,9 +78,5 @@
                 android:layout_margin="20dp"
                 />
         </LinearLayout>
-
-
     </com.google.android.material.card.MaterialCardView>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
