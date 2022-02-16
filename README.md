@@ -1,7 +1,7 @@
 # LatticeInfotech
 A simple news app where we can read news and search it from throughout the api
 
-##App Template
+## App Template
 ![lattice_img](https://user-images.githubusercontent.com/86509973/154208147-a4c97114-ba84-4e5b-a129-b0a796a9c71c.jpg)
 
 ## App video  ✨
